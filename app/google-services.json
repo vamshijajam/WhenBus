@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "477277857546",
+    "firebase_url": "https://whenbus-b4138.firebaseio.com",
+    "project_id": "whenbus-b4138",
+    "storage_bucket": "whenbus-b4138.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:477277857546:android:48d2209b549d574d",
+        "android_client_info": {
+          "package_name": "com.example.vamshijajam.whenbus"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "477277857546-ac4d769nb46qdbq9kc1es585gcau1c02.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.vamshijajam.whenbus",
+            "certificate_hash": "2c0fdf4ef87b769902740b7c373d9d7d7b491b26"
+          }
+        },
+        {
+          "client_id": "477277857546-0l91heicsim54ehiuu216iupijqo8log.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDaBDF7QgbFIn9F4SezCuP01vNnd6RF4R4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "477277857546-0l91heicsim54ehiuu216iupijqo8log.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

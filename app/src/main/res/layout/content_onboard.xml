@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/road"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.vamshijajam.whenbus.Onboard"
+    tools:showIn="@layout/activity_onboard">
+
+    <RelativeLayout
+        android:layout_width="368dp"
+        android:layout_height="495dp"
+        android:orientation="vertical"
+        android:weightSum="1"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
+
+        <TextView
+            android:id="@+id/onboard_textView"
+            android:layout_width="match_parent"
+            android:layout_height="98dp"
+            android:layout_weight="0.23"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textColor="#560C49"
+            android:textSize="20sp" />
+
+        <AutoCompleteTextView
+            android:id="@+id/onboard_location"
+            android:hint="OnBoard BusStop"
+            android:singleLine="true"
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:background="#33000000"
+            android:textColor="#000000"
+            android:layout_below="@+id/onboard_textView"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+
+        <Button
+            android:id="@+id/Onboard_button"
+            android:layout_width="132dp"
+            android:layout_height="37dp"
+            android:background="@drawable/button_onboard"
+            android:paddingTop="130dp"
+            android:layout_below="@+id/onboard_location"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="28dp" />
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>
