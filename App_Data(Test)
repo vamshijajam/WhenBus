@@ -1,0 +1,265 @@
+The json tree of the app is as follows (currently the app contains a lot of dummy data that is irrelevant for a bus system, but has helped us in testing the system:  
+The tree has two childs, one realtime data and the other static data. The random hash childs are the ones that were created by the fully functional app. 
+This data has enough routes to map a subset of the Tamil Madu's MTC system.
+The JSON tree is as follows:
+
+{
+  "realtime" : {
+    "0" : {
+      "busname" : "5C",
+      "location" : "central",
+      "time" : "17:05:00"
+    },
+    "1" : {
+      "busname" : "5C",
+      "location" : "adyargate",
+      "time" : "17:57:00"
+    },
+    "2" : {
+      "busname" : "21GS",
+      "location" : "wesley",
+      "time" : "17:25:00"
+    },
+    "3" : {
+      "busname" : "21GS",
+      "location" : "central",
+      "time" : "17:00:00"
+    },
+    "4" : {
+      "busname" : "5C",
+      "location" : "taramani",
+      "time" : "18:10:00"
+    },
+    "5" : {
+      "busname" : "21GS",
+      "location" : "mandaveli",
+      "time" : "18:00:00"
+    },
+    "6" : {
+      "busname" : "D70NS",
+      "location" : "velachery",
+      "time" : "16:00:00"
+    },
+    "7" : {
+      "busname" : "D70NS",
+      "location" : "tvk",
+      "time" : "16:30:00"
+    },
+    "8" : {
+      "busname" : "D70NS",
+      "location" : "mogappair",
+      "time" : "17:25:00"
+    },
+    "9" : {
+      "busname" : "D170",
+      "location" : "gurunanak",
+      "time" : "16:20:00"
+    },
+    "10" : {
+      "busname" : "D170",
+      "location" : "jafferkhanpet",
+      "time" : "17:04:00"
+    },
+    "11" : {
+      "busname" : "D170",
+      "location" : "thiruverkadu",
+      "time" : "18:00:00"
+    },
+    "-Khw0eet7LIczUjx8t-T" : {
+      "busname" : "D170",
+      "location" : "tvk",
+      "time" : "18:37:09"
+    },
+    "-KhwEJLzu1AAxyX3hNsP" : {
+      "busname" : "5C",
+      "location" : "central",
+      "time" : "19:37:21"
+    },
+    "-Khxo9eTlzwh7suimlAM" : {
+      "busname" : "21GS",
+      "location" : "wesley",
+      "time" : "02:24:27"
+    },
+    "-Khy2dlX92x_ILqiocnT" : {
+      "busname" : "21GS",
+      "location" : "central",
+      "time" : "03:32:07"
+    },
+    "-KhztqRpriU9u2gQ2mDd" : {
+      "busname" : "D170",
+      "location" : "velachery",
+      "time" : "12:42:03"
+    },
+    "-Khztw4p59CjmWqQI8Be" : {
+      "busname" : "D170",
+      "location" : "velachery",
+      "time" : "12:42:26"
+    },
+    "-KhzznOLEXwEssq7IcMy" : {
+      "busname" : "D170",
+      "location" : "velachery",
+      "time" : "13:08:03"
+    },
+    "-Ki--P2uAp-ekzK63EDe" : {
+      "busname" : "D170",
+      "location" : "velachery",
+      "time" : "13:10:42"
+    },
+    "-Ki-0o6by4FqIbfdDJFc" : {
+      "busname" : "21GS",
+      "location" : "ymia",
+      "time" : "13:16:14"
+    },
+    "-Ki-eS8FPNsWd6d26g_Y" : {
+      "busname" : "21GS",
+      "location" : "mandaveli",
+      "time" : "16:13:48"
+    },
+    "-Ki-vUiyVvGu3bX8lvan" : {
+      "busname" : "21GS",
+      "location" : "ymia",
+      "time" : "17:28:51"
+    },
+    "-Ki-wHRDhgXdI3MMZ_qx" : {
+      "busname" : "D70NS",
+      "location" : "velachery",
+      "time" : "17:32:18"
+    },
+    "-Ki-wXi9DcCFIJavdPVd" : {
+      "busname" : "D170",
+      "location" : "gurunanak",
+      "time" : "17:33:25"
+    },
+    "-Ki-wawL6xDcGh3OP4Jb" : {
+      "busname" : "D170",
+      "location" : "racecourse",
+      "time" : "17:33:42"
+    },
+    "-Ki0-X7IXsjVbWrcFIQO" : {
+      "busname" : "21GS",
+      "location" : "mandaveli",
+      "time" : "16:42:16"
+    },
+    "-KiH830srHBAEjZulpUQ" : {
+      "busname" : "D170",
+      "location" : "gurunanak",
+      "time" : "01:41:41"
+    }
+  },
+  "static" : [ {
+    "buses" : "D70NS,D170",
+    "latitude" : 12.9878614,
+    "location" : "velachery",
+    "longitude" : 80.2231295
+  }, {
+    "buses" : "D70NS,D170",
+    "latitude" : 12.99164451,
+    "location" : "gurunanak",
+    "longitude" : 80.21934089
+  }, {
+    "buses" : "D70NS,D170",
+    "latitude" : 13.0035176,
+    "location" : "racecourse",
+    "longitude" : 80.21200508
+  }, {
+    "buses" : "D70NS,D170",
+    "latitude" : 13.0093193,
+    "location" : "tvk",
+    "longitude" : 80.2109241
+  }, {
+    "buses" : "D70NS,D170",
+    "latitude" : 13.03147578,
+    "location" : "jafferkhanpet",
+    "longitude" : 80.20935103
+  }, {
+    "buses" : "D70NS,D170",
+    "latitude" : 13.06551863,
+    "location" : "mmda",
+    "longitude" : 80.21446198
+  }, {
+    "buses" : "D70NS,D170",
+    "latitude" : 13.0709662,
+    "location" : "koyambedu",
+    "longitude" : 80.1990721
+  }, {
+    "buses" : "D70NS",
+    "latitude" : 13.085232,
+    "location" : "thirumangalam",
+    "longitude" : 80.199277
+  }, {
+    "buses" : "D70NS",
+    "latitude" : 13.0783724,
+    "location" : "mogappair",
+    "longitude" : 80.1740799
+  }, {
+    "buses" : "D70NS",
+    "latitude" : 13.095976,
+    "location" : "ambathur",
+    "longitude" : 80.170038
+  }, {
+    "buses" : "D170",
+    "latitude" : 13.0715592,
+    "location" : "nerkundram",
+    "longitude" : 80.1860386
+  }, {
+    "buses" : "D170",
+    "latitude" : 13.0612378,
+    "location" : "maduravayal",
+    "longitude" : 80.1638992
+  }, {
+    "buses" : "D170",
+    "latitude" : 13.0694456,
+    "location" : "thiruverkadu",
+    "longitude" : 80.1267457
+  }, {
+    "buses" : "5C,21GS",
+    "latitude" : 13.08745188,
+    "location" : "broadway",
+    "longitude" : 80.2838742
+  }, {
+    "buses" : "5C,21GS",
+    "latitude" : 13.08206019,
+    "location" : "central",
+    "longitude" : 80.27558751
+  }, {
+    "buses" : "5C,21GS",
+    "latitude" : 13.07002562,
+    "location" : "por",
+    "longitude" : 80.27290463
+  }, {
+    "buses" : "5C,21GS",
+    "latitude" : 13.057236,
+    "location" : "wesley",
+    "longitude" : 80.2647185
+  }, {
+    "buses" : "21GS",
+    "latitude" : 13.04212,
+    "location" : "ymia",
+    "longitude" : 80.268191
+  }, {
+    "buses" : "21GS",
+    "latitude" : 13.0266048,
+    "location" : "mandaveli",
+    "longitude" : 80.2677588
+  }, {
+    "buses" : "5C",
+    "latitude" : 13.039165,
+    "location" : "cit",
+    "longitude" : 80.257542
+  }, {
+    "buses" : "5C",
+    "latitude" : 13.0301078,
+    "location" : "adyargate",
+    "longitude" : 80.2507389
+  }, {
+    "buses" : "5C",
+    "latitude" : 13.0185153,
+    "location" : "kotturpuram",
+    "longitude" : 80.2411449
+  }, {
+    "buses" : "5C",
+    "latitude" : 12.9814227,
+    "location" : "taramani",
+    "longitude" : 80.2429497
+  } ]
+}
