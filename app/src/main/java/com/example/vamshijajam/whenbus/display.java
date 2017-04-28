@@ -133,6 +133,9 @@ public class display extends AppCompatActivity {
 
         Query queryfinal = database.getReference();
 
+        //The static table that we have obtained from mtc, we access first, to understand what all routes are possible and which all latitudes and longitudes need to be stores. 
+        //We note here that we take all the sttic data once as the data in the static d
+        // this is stored in the query object called queryfinal
         queryfinal.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -152,6 +155,7 @@ public class display extends AppCompatActivity {
                             hs.addAll(items);
                         }
                 }
+                //Populating static data into hash maps so that they can be used later more effectively
 
                 for(int i  = 0;i<staticdata.size();i++) {
                     ArrayList<String> coord = new ArrayList<String>();
@@ -163,6 +167,11 @@ public class display extends AppCompatActivity {
                 }
 
                 if(from_given.length()==0) {
+
+                    // If the source isn't mentioned then we have to use google map queries to 
+                    // suggest the nearest possible location they can go to
+                    // this if condition takes care of that fact
+
                     for(int i  = 0;i<staticdata.size();i++) {
                         List<String> items = Arrays.asList(staticdata.get(i).buses.split("\\s*,\\s*"));
                         for(String bus : items) {
@@ -192,9 +201,11 @@ public class display extends AppCompatActivity {
                         }
                     }
                     String origin = Double.toString(currlat) + ","+Double.toString(currlong);
+                    // Initiating goole api qury
                     String url_dist = "https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins="+origin+"&destinations="+finish+"&key=AIzaSyBs6WoDvMO6SGb7wQUEAFEErMA7mBvnVeg";
                     Log.d("TAG",url_dist);
                     new jsontask().execute(url_dist);
+                    // answer is stored in a json
                 }
                 else {
                     Set<String> hs2 = new HashSet<String>();
@@ -206,6 +217,7 @@ public class display extends AppCompatActivity {
                     System.out.println(hs2.size()+" is size4");
                     hs.retainAll(hs2);
                     System.out.println(timesmap.size()+" is size2");
+                    // If not get the realtime databaseError
                     DatabaseReference myref1 = database.getReference().child("realtime");
                     Query Mytopquery1;
                     if(busno_given.length()==0) {
@@ -232,6 +244,7 @@ public class display extends AppCompatActivity {
                                 }
                             }
 //                        System.out.println(q.size());
+                            //Sortiing based on time and hsowcasing the ones who were updated most recently
                             Collections.sort(q, new Comparator<Myobj>() {
                                 @Override
                                 public int compare(Myobj fruit2, Myobj fruit1)
@@ -241,6 +254,7 @@ public class display extends AppCompatActivity {
                                 }
                             });
                             System.out.println(q.size());
+                            // Showing the output
                             for(int i = 0;i<q.size();i++) {
                                 String p = q.get(i).busname;
                                 String p1 = q.get(i).location;
@@ -314,6 +328,7 @@ public class display extends AppCompatActivity {
         @Override
         protected void onPostExecute(String result) {
             try {
+                //Reading the json object of the google api query
                 JSONObject dist_time = new JSONObject(result);
                 JSONArray row = dist_time.getJSONArray("rows");
                 Log.d("TAG",row.toString());
@@ -327,9 +342,9 @@ public class display extends AppCompatActivity {
                     timesmap.put(ssplit[0],i);
                 }
                 int count = 0;
-                int topresults = 2;
+                int topresults = 2;     //finds the top two buses
 
-
+                // Same code as in the case when source is known excepts source are known after we use the api query to find the top 2 entroes
                 ArrayList<String> loc2 = new ArrayList<>();
                 for (Map.Entry<String,Integer> entry : timesmap.entrySet()) {
                     String key = entry.getKey();
@@ -465,6 +480,7 @@ public class display extends AppCompatActivity {
             }
             return;
         }
+        // Code for getting the current location of the user
         locationManager.requestLocationUpdates("gps", 0, 0, locationListener);
         locationManager.requestLocationUpdates("passive", 0, 0, locationListener);
         locationManager.requestLocationUpdates("network", 0, 0, locationListener);

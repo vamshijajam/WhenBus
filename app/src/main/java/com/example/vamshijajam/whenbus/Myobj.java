@@ -1,7 +1,8 @@
 package com.example.vamshijajam.whenbus;
 
 /**
- * Created by vamshijajam on 4/8/2017.
+ * This class is for reading the real time data into an object, the busname field is the  bus id, 
+ * the location is the last updated location and the time , and the time is the time at which the particular bus eas seen at the specified location.
  */
 
 public class Myobj {

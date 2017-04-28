@@ -81,10 +81,12 @@ public class MainActivity extends AppCompatActivity {
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         toolbar.setTitle("WhenBus");
-//        toolbar.setLogo(R.drawable.b1);
+        // toolbar.setLogo(R.drawable.b1);
         // Write a message to the database
 
-        database = FirebaseDatabase.getInstance();
+
+        //Create a firebase instance, this is the link to all of the data that is stored at the firebase servers.
+        database = FirebaseDatabase.getInstance();atabase is not huge, this is to help us in reducing various queries
         DatabaseReference myRef = database.getReference().child("static");
         Log.d("TAG", myRef.toString());
         Query Mytopquery = myRef.orderByChild("location");
@@ -95,7 +97,9 @@ public class MainActivity extends AppCompatActivity {
                 for (DataSnapshot usersnapshot : dataSnapshot.getChildren()) {
                     if (usersnapshot.exists()) {
                         dest.add(usersnapshot.child("location").getValue().toString());
+                        //finding possile locations as the bus stops
                         busses.add(usersnapshot.child("buses").getValue().toString());
+                        //finding possile buses on route
                         Log.d("TAG", usersnapshot.child("location").getValue().toString());
                     }
                 }
@@ -121,12 +125,7 @@ public class MainActivity extends AppCompatActivity {
         auto.setThreshold(1);
         auto.setAdapter(adapter);
 
-//        Spinner dropdown = (Spinner)findViewById(R.id.spinner1);
-//        String[] items = new String[]{"", "2", "three"};
-//        ArrayAdapter<String> adapter12 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, items);
-//        dropdown.setAdapter(adapter12);
-//
-
+        //Auto complete ensures that the user has suggestions for the bus destinations and busses when he clicks on the autocomplete icon.
         auto2 = (AutoCompleteTextView) findViewById(R.id.autocomplete_Location);
         ArrayAdapter adapter2 = new ArrayAdapter(this, android.R.layout.select_dialog_item, dest);
         auto2.setThreshold(1);
@@ -151,6 +150,7 @@ public class MainActivity extends AppCompatActivity {
                 String destination_given = destination_text.getText().toString();
                 String busno_given = busno_text.getText().toString();
 //                System.out.println(from_given + "----" + destination_given + "---" + busno_given);
+                // Code to ensure that we get a destination mandatoraly, to prevent the user from givving null destinations
                 if (TextUtils.isEmpty(destination_given)) {
                     destination_text.setError(" Enter your Destination");
                     return;
@@ -209,6 +209,8 @@ public class MainActivity extends AppCompatActivity {
                 textView.setTextSize(16);
                 textView.setPadding(50,0,50,0);
                 textView.setTextColor(Color.parseColor("#000000"));
+
+                //Help Page text, helps to explain the user how the app works.
                 textView.setText(    "\n How to use the app?\n\n"+
 
                         "1. Enter the destination in Chennai where you want to go(this is a mandatory requirement).\n"+

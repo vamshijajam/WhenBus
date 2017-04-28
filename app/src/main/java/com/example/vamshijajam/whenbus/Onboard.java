@@ -59,6 +59,7 @@ public class Onboard extends AppCompatActivity {
 
         Log.d("TAG", Mytopquery.toString());
         final ArrayList boarding = new ArrayList();
+        // Query code to ensure that the bus stop user chooses to board matches the bus he chose to be on
         Mytopquery.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -112,6 +113,7 @@ public class Onboard extends AppCompatActivity {
                 else {
                     Log.d("TAG","valid");
                     Calendar c = Calendar.getInstance();
+                    // Adding the object to the database, the code fot crowsourcing
                     SimpleDateFormat df = new SimpleDateFormat("HH:mm:ss");
                     String formattedtime = df.format(c.getTime());
                     Myobj obj1 = new Myobj(busname, boarding_at,formattedtime);
