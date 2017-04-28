@@ -86,7 +86,8 @@ public class MainActivity extends AppCompatActivity {
 
 
         //Create a firebase instance, this is the link to all of the data that is stored at the firebase servers.
-        database = FirebaseDatabase.getInstance();atabase is not huge, this is to help us in reducing various queries
+        database = FirebaseDatabase.getInstance();
+        //As database is not huge, storing all static data at once helps us in reducing various queries
         DatabaseReference myRef = database.getReference().child("static");
         Log.d("TAG", myRef.toString());
         Query Mytopquery = myRef.orderByChild("location");
